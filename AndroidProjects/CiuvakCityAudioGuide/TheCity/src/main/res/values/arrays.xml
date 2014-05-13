@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer-array name="poi_ids">
+        <item>11</item>
+        <item>22</item>
+        <item>33</item>
+        <item>44</item>
+        <item>55</item>
+        <item>66</item>
+        <item>77</item>
+        <item>88</item>
+        <item>99</item>
+    </integer-array>
+
+    <string-array name="poi_names">
+        <item>Piata Muzeului</item>
+        <item>Casa Matei</item>
+        <item>Statuia Matei Corvin</item>
+        <item>Biserica Sf. Mihail</item>
+        <item>Teatrul National</item>
+        <item>Statuia Avram Iancu</item>
+        <item>Catedrala Ortodoxa</item>
+        <item>Gradina Botanica</item>
+        <item>Cetatuia</item>
+    </string-array>
+
+    <string-array name="poi_names_lats">
+        <item>46.771960</item>
+        <item>46.771189</item>
+        <item>46.769521</item>
+        <item>46.769940</item>
+        <item>46.770366</item>
+        <item>46.771292</item>
+        <item>46.771953</item>
+        <item>46.762617</item>
+        <item>46.774272</item>
+    </string-array>
+    <string-array name="poi_names_longs">
+        <item>23.586965</item>
+        <item>23.588231</item>
+        <item>23.589873</item>
+        <item>23.589583</item>
+        <item>23.598359</item>
+        <item>23.596739</item>
+        <item>23.596299</item>
+        <item>23.589151</item>
+        <item>23.581941</item>
+    </string-array>
+
+    <integer-array name="poi_names_priorities">
+        <item>4</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+        <item>1</item>
+        <item>3</item>
+        <item>5</item>
+        <item>7</item>
+    </integer-array>
+
+
+</resources>
