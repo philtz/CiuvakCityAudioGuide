@@ -60,8 +60,8 @@ public class MapActivity extends BaseActivity implements SKMapSurfaceListener {
         mapView = mapViewGroup.getMapSurfaceView();
         mapView.setMapSurfaceListener(this);
         mapView.getMapSettings().setFollowerMode(SKMapSettings.MAP_FOLLOWER_MODE_NONE);
-        mapView.reportNewGPSPosition(new SKPosition(23.589600, 46.769901));
-        mapView.centerMapOnPositionSmooth(23.589600, 46.769901, 1000);
+//        mapView.reportNewGPSPosition(new SKPosition(23.589600, 46.769901));
+//        mapView.centerMapOnPositionSmooth(23.589600, 46.769901, 1000);
         mapView.setCCPIcon(SKMapSurfaceView.SKCCPArrowType.CCP_BLUE_DOT);
         applySettingsOnMapView();
 

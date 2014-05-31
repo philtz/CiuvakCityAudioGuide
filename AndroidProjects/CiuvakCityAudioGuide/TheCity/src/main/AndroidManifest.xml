@@ -29,10 +29,10 @@
             android:configChanges="orientation|keyboardHidden|screenSize|locale|fontScale"
             android:label="@string/app_name"></activity>
 
-        <!-- google play services Rev 16 -->
+        <!-- google play services Rev 17 -->
         <meta-data
             android:name="com.google.android.gms.version"
-            android:value="4323000" />
+            android:value="4452000" />
 
     </application>
 
