@@ -22,4 +22,11 @@
             android:background="@drawable/map_background" />
     </FrameLayout>
 
+    <include
+        layout="@layout/test_input_data"
+        android:id="@+id/test_input_data_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
 </RelativeLayout>

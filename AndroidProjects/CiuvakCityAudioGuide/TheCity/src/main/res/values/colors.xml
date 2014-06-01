@@ -1,4 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="splash_blue">#0000FF</color>
+    <!-- basic colors -->
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black_white_buttons">#343434</color>
+    <color name="gray">#d8d8d8</color>
+    <color name="category_search_separator_list_item">#bababa</color>
+    <color name="top_bar_color">#222222</color>
+
+    <!-- menu bar colors -->
+    <color name="menu_bar_separator_color">#656565</color>
+    <color name="menu_bar_header_text">#8c8b8b</color>
+    <color name="menu_bar_item_normal_focused">#3a3a3a</color>
+    <color name="menu_bar_item_text">#e4e2e3</color>
+    <color name="menu_bar_semi_transparent_background">#77000000</color>
+    <color name="navigation_disclaimer_background">#DD000000</color>
+    <color name="menu_bar_transparent_background">#00000000</color>
+
+    <!-- poi details -->
+    <color name="poi_details_image_background">#80ebebeb</color>
+
+    <!-- list text colors -->
+    <color name="list_separator_text">#686868</color>
+    <color name="list_bg_color">#efefef</color>
+    <color name="list_distance_text_color">#c6c6c6</color>
+    <color name="list_item_speed_limit_color">#2d2d2d</color>
+
+    <!-- Colors for download -->
+    <color name="progress_end">#FFA200</color>
+
+    <!-- Routing dialog colors -->
+    <color name="routing_semi_transparent_background">#66000000</color>
+
+    <!-- map download -->
+    <color name="map_download_bottom_end">#eeeeee</color>
+
+    <!-- local search -->
+    <color name="shop_separator_dark_color">#bcbcbc</color>
+
+    <!-- tutorial -->
+    <color name="tutorial_top_start">#dedede</color>
+
+    <!-- login -->
+    <color name="blue_font_username">#46bcf9</color>
+
+    <!-- navigate -->
+    <color name="navigate_blue_button">#ff48c1ff</color>
+    <color name="navigate_blue_button_pressed">#ff3081aa</color>
+    <color name="navigate_unhighlighted_text">#b1b1b1</color>
+    <color name="post_navigation_second_text">#525252</color>
+
+    <!-- walkthrough -->
+    <color name="walkthrough_bottom_bg_color">#ececec</color>
+    <color name="walkthrough_text_bg_color">#f2f2f2</color>
+
+    <!-- recent favorite list element -->
+    <color name="recent_favorite_separator_color">#e7e7e7</color>
+
+    <!-- alternative route colors -->
+    <color name="white_semi_transparent">#e5ffffff</color>
+    <color name="alternate_blue_text">#48c1ff</color>
+    <color name="alternate_gray_text">#a4a4a2</color>
+    <color name="alternate_selected_text">#d7f4ff</color>
+    <color name="reported_bug_gray">#777777</color>
+    <color name="searching_for_gps_text">#323232</color>
+    <color name="speedcam_progress">#FF5649</color>
+    <color name="speedcam_background">#30E162</color>
+
+    <!-- upgrades screen -->
+    <color name="restore_purchase_yellow_color">#feed01</color>
+
+    <!-- no map data available panel -->
+    <color name="green_no_map_data_panel">#31e164</color>
+
+    <!-- tripadvisor/foursquare screens colors -->
+    <color name="green_tripadvisor">#589442</color>
+    <color name="tripadvisor_prices_color">#cf6f10</color>
+    <color name="foursquare_gray_background">#E1E1E1</color>
+    <color name="foursquare_gray_text">#898989</color>
+    <color name="foursquare_button_disabled_background">#fafafa</color>
+    <color name="foursquare_button_disabled_text">#bebebe</color>
+
+    <color name="top_bar_background_color">#ECEBEB</color>
+    <color name="top_bar_separator_not_pressed">#D1D1D1</color>
+    <color name="download_progress_background">#FF898989</color>
+
+    <!-- navigation panels-->
+    <color name="red_panel_night_background">#AB3A2F</color>
+    <color name="red_panel_night_text">#FF867C</color>
+
+    <color name="green_panel_day_background">#00B363</color>
+    <color name="green_panel_night_background">#22AC4A</color>
+    <color name="green_panel_night_text">#70FF98</color>
+
+    <color name="blue_panel_day_background">#364EDE</color>
+    <color name="blue_panel_night_background">#2A82AC</color>
+    <color name="blue_panel_night_text">#7CD3FF</color>
+
+    <color name="yellow_panel_day_background">#FFC702</color>
+    <color name="yellow_panel_night_background">#AC8A31</color>
+    <color name="yellow_panel_night_text">#FFDA7C</color>
+
+    <color name="navigation_bottom_bar_day">#E6FFFFFF</color>
+    <color name="navigation_bottom_bar_night">#E6343434</color>
+    <color name="white_default_panel_night_background">#717171</color>
+    <color name="navigation_next_advice_overlay_background">#16000000</color>
+
+    <color name="category_search_position_selector_background">#4D000000</color>
+
+    <!-- bottom map updates button -->
+    <color name="check_for_updates_color">#ffaf03</color>
+    <color name="everything_is_up_to_date_color">#30e162</color>
 </resources>

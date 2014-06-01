@@ -3,13 +3,17 @@ package com.ciuvak.cluj.activity;
 import android.content.res.Configuration;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 
 import com.ciuvak.cluj.R;
 import com.ciuvak.cluj.application.CiuvakApplication;
+import com.ciuvak.cluj.application.CiuvakApplicationPreferences;
 import com.ciuvak.cluj.location.LocationProviderController;
-import com.ciuvak.cluj.util.ComputingDistance;
 import com.skobbler.ngx.SKCoordinate;
 import com.skobbler.ngx.SKMaps;
 import com.skobbler.ngx.map.SKAnnotation;
@@ -21,21 +25,7 @@ import com.skobbler.ngx.map.SKMapSurfaceView;
 import com.skobbler.ngx.map.SKMapViewHolder;
 import com.skobbler.ngx.map.SKPOICluster;
 import com.skobbler.ngx.map.SKScreenPoint;
-import com.skobbler.ngx.navigation.SKNavigationListener;
-import com.skobbler.ngx.navigation.SKNavigationManager;
-import com.skobbler.ngx.navigation.SKNavigationSettings;
-import com.skobbler.ngx.navigation.SKNavigationState;
-import com.skobbler.ngx.poitracker.SKDetectedPOI;
-import com.skobbler.ngx.poitracker.SKPOITrackerListener;
-import com.skobbler.ngx.poitracker.SKPOITrackerManager;
-import com.skobbler.ngx.poitracker.SKTrackablePOI;
 import com.skobbler.ngx.positioner.SKPosition;
-import com.skobbler.ngx.search.SKSearchResult;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import test.ciuvak.cluj.mock.TestPoiMockData;
 
 /**
  * Created by philtz on 24-Apr-14.
@@ -44,6 +34,11 @@ public class MapActivity extends BaseActivity implements SKMapSurfaceListener {
 
     private static boolean mapWasCentered = false;
     MediaPlayer mediaPlayer;
+
+    EditText testMapZoom;
+    EditText testRadiusUpdate;
+    EditText testAlertDistance;
+    LinearLayout testScreen;
     /**
      * Surface view for displaying the map
      */
@@ -69,6 +64,62 @@ public class MapActivity extends BaseActivity implements SKMapSurfaceListener {
         if (LocationProviderController.hasGPSReceiver) {
             LocationProviderController.getInstance().connectLocationService(true);
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu items for use in the action bar
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.test_input_data_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle presses on the action bar items
+        switch (item.getItemId()) {
+            case R.id.action_input_test_data:
+                testScreen = (LinearLayout) findViewById(R.id.test_input_data_screen);
+                testScreen.setVisibility(View.VISIBLE);
+                testMapZoom = (EditText) findViewById(R.id.map_zoom_level_value);
+                testMapZoom.setText(String.valueOf(CiuvakApplication.getInstance()
+                        .ciuvakApplicationPreferences
+                        .getFloatPreference(CiuvakApplicationPreferences.K_TEST_DATA_INPUT_MAP_ZOOM_LEVEL)));
+                testRadiusUpdate = (EditText) findViewById(R.id.radius_update_value);
+                testRadiusUpdate.setText(String.valueOf(CiuvakApplication.getInstance()
+                        .ciuvakApplicationPreferences
+                        .getIntPreference(CiuvakApplicationPreferences.K_TEST_DATA_INPUT_RADIUS_UPDATE)));
+                testAlertDistance = (EditText) findViewById(R.id.alert_distance_value);
+                testAlertDistance.setText(String.valueOf(CiuvakApplication.getInstance()
+                        .ciuvakApplicationPreferences
+                        .getIntPreference(CiuvakApplicationPreferences.K_TEST_DATA_INPUT_ALERT_DISTANCE)));
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    public void goCiuvak(View v) {
+        System.out.println("Filip mergeeee");
+        String zoomLevel = testMapZoom.getText().toString();
+        CiuvakApplication.getInstance()
+                .ciuvakApplicationPreferences
+                .setPreference(CiuvakApplicationPreferences.K_TEST_DATA_INPUT_MAP_ZOOM_LEVEL, Float.valueOf(zoomLevel));
+        System.out.println("Filip zoom= " + zoomLevel);
+        String radiusUpdate = testRadiusUpdate.getText().toString();
+        CiuvakApplication.getInstance()
+                .ciuvakApplicationPreferences
+                .setPreference(CiuvakApplicationPreferences.K_TEST_DATA_INPUT_RADIUS_UPDATE, Integer.valueOf(radiusUpdate));
+        System.out.println("Filip radiusUpdate= " + radiusUpdate);
+        String alertDistance = testAlertDistance.getText().toString();
+        CiuvakApplication.getInstance()
+                .ciuvakApplicationPreferences
+                .setPreference(CiuvakApplicationPreferences.K_TEST_DATA_INPUT_ALERT_DISTANCE, Integer.valueOf(alertDistance));
+        System.out.println("Filip alertDistance= " + alertDistance);
+
+        CiuvakApplication.getInstance()
+                .ciuvakApplicationPreferences.savePreferences();
+        testScreen.setVisibility(View.GONE);
     }
 
     @Override

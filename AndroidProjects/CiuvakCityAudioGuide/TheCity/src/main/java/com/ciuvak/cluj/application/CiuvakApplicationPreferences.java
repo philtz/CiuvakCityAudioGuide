@@ -48,8 +48,16 @@ public class CiuvakApplicationPreferences {
             this.setPreference(PreferenceTypes.K_PREFS_INITIALIZED, PreferenceTypes.ON);
             this.setPreference(PreferenceTypes.K_FIRST_RUN, PreferenceTypes.ON);
 
+            setDebugPreferencesDefaultValues();
+
             this.savePreferences();
         }
+    }
+
+    private void setDebugPreferencesDefaultValues() {
+        this.setPreference(K_TEST_DATA_INPUT_MAP_ZOOM_LEVEL, 17.0f);
+        this.setPreference(K_TEST_DATA_INPUT_RADIUS_UPDATE, 500);
+        this.setPreference(K_TEST_DATA_INPUT_ALERT_DISTANCE, 20);
     }
 
     /**
@@ -209,5 +217,11 @@ public class CiuvakApplicationPreferences {
     public void setContext(Context context) {
         this.context = context;
     }
+
+    public static final String K_TEST_DATA_INPUT_MAP_ZOOM_LEVEL = "testDataInputMapZoomLevel";
+
+    public static final String K_TEST_DATA_INPUT_RADIUS_UPDATE = "testDataInputRadiusUpdate";
+
+    public static final String K_TEST_DATA_INPUT_ALERT_DISTANCE = "testDataInputAlertDistance";
 }
 
